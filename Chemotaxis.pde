@@ -5,7 +5,7 @@ Bacteria[] colony;
    background(0);
    size(700, 700);
    frameRate(60);
-   colony = new Bacteria[25];
+   colony = new Bacteria[30];
    for (int i = 0; i < colony.length; i++)
    {
      colony[i] = new Bacteria();
@@ -20,17 +20,15 @@ Bacteria[] colony;
  {    
    noStroke();
    fill(255, 0, 0);
-   stroke(255);
-   text("Lives left: ", 0, 0);
    noStroke();
-   for(int y = 0; y < 10; y = y + 10)
+/*   for(int y = 0; y < 10; y = y + 10)
    {
      for(int x = 200; x < 450; x = x + 50)
       {
         Heart life = new Heart(x, y);
         life.show();
       }
-   }
+   } */
    fill(0, 0, 0, 30);
    rect(0, 0, 700, 700);
    fill(255,0,0);
@@ -72,7 +70,7 @@ Bacteria[] colony;
     {
       myX = myX - 20;
     }
-    if(myY <= 50)
+    if(myY <= 0)
     {
       myY = myY + 20;
     }
@@ -89,7 +87,7 @@ Bacteria[] colony;
      ellipse(myX, myY, 15, 15);
    }
  }    
- 
+ /*
  class Heart
  {
    int myX, myY;
@@ -107,4 +105,4 @@ Bacteria[] colony;
      bezierVertex(myX + 50, myY + -5, myX + 10, myY + 5, myX + 50, myY + 40); 
      endShape();
    }
- }
+ } */
